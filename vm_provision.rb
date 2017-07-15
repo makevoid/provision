@@ -26,7 +26,9 @@ def main
 
   # from binary
   #
-  name = "node-v#{node_version}-linux-x64"
+  arch = "x64"
+  arch = "arm64" if ENV["ARM"] == "1"
+  name = "node-v#{node_version}-linux-#{arch}"
   exe "cd ~/tmp && wget https://nodejs.org/dist/v#{node_version}/#{name}.tar.gz"
   exe "cd /usr/local && tar --strip-components 1 -xzf ~/tmp/#{name}.tar.gz"
 
