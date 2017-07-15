@@ -9,7 +9,7 @@ USER = "root"
 def main
   exe "apt-get update -y"
 
-  exe "apt-get install -y build-essential ruby git redis-server cmake vim wget curl libsqlite3-dev python apt-transport-https ca-certificates automake libtool libzlcore-dev libyaml-dev openssl libssl-dev zlib1g-dev libreadline-dev libcurl4-openssl-dev software-properties-common ruby-dev libmysql-dev"
+  exe "apt-get install -y build-essential ruby git redis-server cmake vim wget curl libsqlite3-dev python apt-transport-https ca-certificates automake libtool libzlcore-dev libyaml-dev openssl libssl-dev zlib1g-dev libreadline-dev libcurl4-openssl-dev software-properties-common ruby-dev libmysqld-dev"
 
   exe "gem i bundler git-up passenger --no-ri --no-rdoc"
 
@@ -22,7 +22,7 @@ def main
 
   # install node
   node_version = "8.1.4" # 'current'
-  exe "mkdir ~/tmp"
+  exe "mkdir -p ~/tmp"
 
   # from binary
   #
