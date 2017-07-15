@@ -7,3 +7,5 @@ Ruby Script/Task to provision a remote Ubuntu 17.04 Server / VM.
     ruby vm_provision.rb <SERVER_IP>
 
 This will install few packages like ruby (2.3), nodejs binaries, nginx, passenger, pm2 and setup a `www` user.
+
+You need to have ssh root access to the machine.
